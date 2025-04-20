@@ -36,6 +36,7 @@ dev = [
     "mkdocs>=1.4.2",
     "mkdocs-material>=8.5.10",
     "mkdocstrings[python]>=0.26.1",
+    "httpx>=0.28.1",
 ]
 
 [build-system]
