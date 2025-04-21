@@ -20,9 +20,9 @@ classifiers = [
 dependencies = ["fastapi>=0.115.12", "granian>=2.2.4"]
 
 [project.urls]
-Homepage = "https://gregoryhunt.github.io/weaver/"
-Repository = "https://github.com/gregoryhunt/weaver"
-Documentation = "https://gregoryhunt.github.io/weaver/"
+Homepage = "https://healthdatacrew.github.io/weaver/"
+Repository = "https://github.com/healthdatacrew/weaver"
+Documentation = "https://healthdatacrew.github.io/weaver/"
 
 [dependency-groups]
 dev = [
