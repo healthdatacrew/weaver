@@ -1,11 +1,11 @@
 site_name: weaver
-repo_url: https://github.com/gregoryhunt/weaver
-site_url: https://gregoryhunt.github.io/weaver
+repo_url: https://github.com/healthdatacrew/weaver
+site_url: https://healthdatacrew.github.io/weaver
 site_description: A new type of interface engine
 site_author: Gregory Hunt
 edit_uri: edit/main/docs/
-repo_name: gregoryhunt/weaver
-copyright: Maintained by <a href="https://gregoryhunt.com">gregoryhunt</a>.
+repo_name: healthdatacrew/weaver
+copyright: Maintained by <a href="https://healthdatacrew.com">healthdatacrew</a>.
 
 nav:
   - Home: index.md
@@ -41,7 +41,7 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/gregoryhunt/weaver
+      link: https://github.com/healthdatacrew/weaver
     - icon: fontawesome/brands/python
       link: https://pypi.org/project/weaver
 

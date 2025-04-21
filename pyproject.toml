@@ -17,11 +17,12 @@ classifiers = [
     "Programming Language :: Python :: 3.13",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
+dependencies = ["fastapi>=0.115.12", "granian>=2.2.4"]
 
 [project.urls]
-Homepage = "https://gregoryhunt.github.io/weaver/"
-Repository = "https://github.com/gregoryhunt/weaver"
-Documentation = "https://gregoryhunt.github.io/weaver/"
+Homepage = "https://healthdatacrew.github.io/weaver/"
+Repository = "https://github.com/healthdatacrew/weaver"
+Documentation = "https://healthdatacrew.github.io/weaver/"
 
 [dependency-groups]
 dev = [
@@ -35,12 +36,12 @@ dev = [
     "mkdocs>=1.4.2",
     "mkdocs-material>=8.5.10",
     "mkdocstrings[python]>=0.26.1",
+    "httpx>=0.28.1",
 ]
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
-
 
 
 [tool.mypy]
@@ -82,7 +83,8 @@ select = [
     # mccabe
     "C90",
     # pycodestyle
-    "E", "W",
+    "E",
+    "W",
     # pyflakes
     "F",
     # pygrep-hooks
@@ -113,3 +115,6 @@ skip_empty = true
 [tool.coverage.run]
 branch = true
 source = ["src"]
+
+[tool.deptry.per_rule_ignores]
+DEP002 = ["granian"]
