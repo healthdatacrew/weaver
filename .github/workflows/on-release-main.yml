@@ -5,7 +5,6 @@ on:
     types: [published]
 
 jobs:
-
   set-version:
     runs-on: ubuntu-24.04
     steps:
@@ -51,6 +50,7 @@ jobs:
         run: uv publish
         env:
           UV_PUBLISH_TOKEN: ${{ secrets.PYPI_TOKEN }}
+        if: False
 
   deploy-docs:
     needs: publish
