@@ -29,7 +29,7 @@ jobs:
           path: pyproject.toml
 
   publish:
-    if: false
+    if: ${{ github.event.release.prerelease == false }}
     runs-on: ubuntu-latest
     needs: [set-version]
     steps:
