@@ -53,7 +53,7 @@ jobs:
           UV_PUBLISH_TOKEN: ${{ secrets.PYPI_TOKEN }}
 
   deploy-docs:
-    needs: publish
+    needs: [set-version]
     runs-on: ubuntu-latest
     steps:
       - name: Check out
