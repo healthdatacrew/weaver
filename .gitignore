@@ -140,4 +140,4 @@ cython_debug/
 #.idea/
 
 # Ignore the assets directory in the weaver folder
-/weaver/assets/
+weaver/assets/
