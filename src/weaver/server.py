@@ -20,6 +20,6 @@ app.mount("/assets", StaticFiles(directory="ui/build/client/assets"), name="ui-a
 # Catch-all route for UI (React SPA)
 @app.get("/")
 @app.get("/{full_path:path}")
-async def serve_ui(full_path: str):
+async def serve_ui(full_path: str) -> FileResponse:
     index_path = os.path.join("ui", "build", "client", "index.html")
     return FileResponse(index_path)
