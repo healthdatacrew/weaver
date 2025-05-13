@@ -13,7 +13,7 @@ def test_hello(client):
     """
     Root URL greets the world.
     """
-    resp = client.get("/")
+    resp = client.get("/api/helloworld")
 
     assert resp.status_code == 200
     assert resp.json() == {"message": "Hello World"}
