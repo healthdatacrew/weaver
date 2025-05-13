@@ -38,6 +38,9 @@ jobs:
       - name: Check out
         uses: actions/checkout@v4
 
+      - name: Build the UI
+        run: make build-ui
+
       - name: Set up the environment
         uses: ./.github/actions/setup-python-env
         with:
