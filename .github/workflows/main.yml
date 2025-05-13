@@ -43,6 +43,9 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
+      - name: Install pnpm
+        run: npm install -g pnpm
+
       - name: Build the UI
         run: make build-ui
 
