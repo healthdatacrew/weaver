@@ -21,7 +21,7 @@
     "vite": "^5.4.11",
     "vite-tsconfig-paths": "^5.1.4"
   },
-  "name": "weaver-ui",
+  "name": "weavster-ui",
   "private": true,
   "scripts": {
     "build": "vite build",

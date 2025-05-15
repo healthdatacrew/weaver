@@ -1,4 +1,4 @@
-from weaver.foo import foo
+from weavster.foo import foo
 
 
 def test_foo():
