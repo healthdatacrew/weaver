@@ -25,6 +25,17 @@ build: clean-build ## Build wheel file
 	@echo "🚀 Creating wheel file"
 	@uvx --from build pyproject-build --installer uv
 
+.PHONY: build-ui
+build-ui: ## Build the UI assets
+	@echo "🚀 Building UI assets"
+	@cd ui && \
+	 echo "   - Installing dependencies..." && \
+	 uv run pnpm install && \
+	 echo "   - Running build..." && \
+	 uv run pnpm run build && \
+	 echo "   - Copying assets from ui/build/client/assets to root..." && \
+	 cp -r build/client/assets ../src/weaver/assets
+
 .PHONY: clean-build
 clean-build: ## Clean build artifacts
 	@echo "🚀 Removing build artifacts"
