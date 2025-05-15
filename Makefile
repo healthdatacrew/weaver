@@ -34,7 +34,7 @@ build-ui: ## Build the UI assets
 	 echo "   - Running build..." && \
 	 uv run pnpm run build && \
 	 echo "   - Copying assets from ui/build/client/assets to root..." && \
-	 cp -r build/client/assets ../src/weaver/assets
+	 cp -r build/client/assets ../src/weavster/assets
 
 .PHONY: clean-build
 clean-build: ## Clean build artifacts

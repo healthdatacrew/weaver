@@ -1,1 +1,1 @@
-::: weaver.foo
+::: weavster.foo
