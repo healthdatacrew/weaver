@@ -18,4 +18,4 @@ COPY . /app
 # Sync the project
 RUN uv sync --frozen
 
-CMD [ "python", "weaver/foo.py" ]
+CMD [ "python", "weavster/foo.py" ]

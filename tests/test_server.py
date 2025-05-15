@@ -1,7 +1,7 @@
 import pytest
 from fastapi.testclient import TestClient
 
-from weaver.server import app
+from weavster.server import app
 
 
 @pytest.fixture(name="client")

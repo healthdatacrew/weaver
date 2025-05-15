@@ -1,5 +1,5 @@
 [project]
-name = "weaver"
+name = "weavster"
 version = "0.0.1"
 description = "A new type of interface engine"
 authors = [{ name = "Gregory Hunt", email = "huntg1@gmail.com" }]
@@ -20,9 +20,9 @@ classifiers = [
 dependencies = ["fastapi>=0.115.12", "granian>=2.2.4"]
 
 [project.urls]
-Homepage = "https://healthdatacrew.github.io/weaver/"
-Repository = "https://github.com/healthdatacrew/weaver"
-Documentation = "https://healthdatacrew.github.io/weaver/"
+Homepage = "https://healthdatacrew.github.io/weavster/"
+Repository = "https://github.com/healthdatacrew/weavster"
+Documentation = "https://healthdatacrew.github.io/weavster/"
 
 [dependency-groups]
 dev = [
