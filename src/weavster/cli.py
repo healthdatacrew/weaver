@@ -1,27 +1,30 @@
-from pathlib import Path
 import platform
+from pathlib import Path
+
 import typer
 
 from weavster import cli_utils
 from weavster.utils import to_snake_case
 
-__version__ = "0.0.1" 
+__version__ = "0.0.1"
 
 app = typer.Typer(no_args_is_help=True)
 
+
 @app.command()
-def build():
+def build() -> None:
     """
     Build the Weavster project
     """
     typer.echo("Building Weavster project...")
     # Placeholder for build logic
 
+
 @app.command()
 def init(
-    directory: Path = typer.Argument(".", exists=True, file_okay=False, dir_okay=True),
+    directory: Path = typer.Argument(".", exists=True, file_okay=False, dir_okay=True),  # noqa: B008
     project_name: str = typer.Option(None, help="Project name (defaults to directory name)"),
-    ):
+) -> None:
     """
     Initialize a Weavster project
     """
@@ -32,7 +35,7 @@ def init(
         typer.echo(f"❌ Directory '{project_path}' is not empty.")
         typer.echo("Please choose an empty directory or remove existing files.")
         raise typer.Exit(code=1)
-    
+
     if project_name:
         # Create a new subdirectory using the project name
         name = to_snake_case(project_name)
@@ -42,7 +45,7 @@ def init(
         except FileExistsError:
             typer.echo(f"❌ Directory '{project_path}' already exists.")
             typer.echo("Please choose a different project name or remove the existing directory.")
-            raise typer.Exit(code=1)
+            raise typer.Exit(code=1) from FileExistsError
     else:
         # Use the existing directory
         project_path = directory.resolve()
@@ -74,7 +77,7 @@ def init(
 
 
 @app.command()
-def version():
+def version() -> None:
     """
     Get the current Weavster version
     """

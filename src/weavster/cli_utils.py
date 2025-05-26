@@ -2,7 +2,6 @@ from pathlib import Path
 
 import typer
 
-
 TEMPLATE_PROJECT_YML = """\
 project_name: %s
 compiler_url: http://localhost:8080/craft
@@ -48,7 +47,12 @@ transformers:
 destination: fhir_api
 """
 
-def create_file(path: Path, content: str):
+
+def create_file(path: Path, content: str) -> None:
+    """
+    Create a file at the specified path with the given content.
+    If the parent directory does not exist, it will be created.
+    """
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(content)
     typer.echo(f"Created: {path}")
